@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+  PLANTILLA BASE DE PANEL — NO EDITAR PARA UN PANEL CONCRETO.
+
+  Este archivo es la fuente que usa build.js para generar cada página de
+  panel (paneles/<id>.html) a partir del contenido en /contenido/*.md.
+  Los tokens con dobles llaves (ver el cuerpo del documento) los rellena
+  el script de construcción.
+
+  Para añadir o cambiar un panel, edita/crea un archivo en /contenido/ y
+  vuelve a ejecutar `node build.js`. No toques este archivo salvo que
+  quieras cambiar el diseño de TODOS los paneles a la vez.
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Segundo panel de ejemplo (PLACEHOLDER) — Homenaje a Fulgencio Romera Asensio</title>
+<link rel="stylesheet" href="../css/estilo.css" />
+</head>
+<body>
+
+<!-- CONTENIDO PROVISIONAL: pendiente de sustituir por contenido real -->
+<script>console.log("%c\u26A0 Contenido provisional: pendiente de sustituir por contenido real.", "color:#9A7441;font-weight:bold;");</script>
+
+<section class="hero">
+  <div class="hero-nav">
+    <a class="hero-volver" href="../index.html">← Volver</a>
+    <span class="hero-indicador">2 / 2</span>
+  </div>
+
+  <button class="hero-tap" type="button" aria-label="Reproducir o pausar el audio de este panel">
+    <img src="../media/fotos/foto-confirmacion-infancia.jpg" alt="Fotografía histórica en blanco y negro de una ceremonia de confirmación, con un sacerdote entregando algo a un joven arrodillado." />
+  </button>
+
+  <div class="hero-overlay">
+    <div class="hero-info">
+      <span class="etiqueta-bloque">Capítulo 01 · Infancia y raíces (1923–1936)</span>
+      <h1 class="hero-titulo">Segundo panel de ejemplo (PLACEHOLDER)</h1>
+    </div>
+    <div class="hero-reproductor">
+      <span class="boton-play" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+      </span>
+      <span id="hero-texto" class="hero-texto">Toca para escuchar su voz</span>
+    </div>
+  </div>
+
+  <span id="hero-progreso" class="hero-progreso"></span>
+</section>
+
+<audio id="audio-panel" src="../media/audio/placeholder.wav" preload="metadata"></audio>
+
+<main class="contenido-panel">
+  <div class="contexto">
+    <p>Este es un segundo panel de EJEMPLO, creado únicamente para comprobar que el diseño de foto a pantalla completa funciona bien con más de una fotografía real. El texto de este párrafo es un PLACEHOLDER.</p>
+    <p>Cuando se cierre este bloque con contenido definitivo, este panel podrá convertirse en un panel real o eliminarse si no corresponde a una fotografía física de la exposición.</p>
+  </div>
+
+  <blockquote class="cita">Esta es una cita de ejemplo. Cuando cerremos este bloque, aquí irá una frase textual y real, tomada de sus entrevistas grabadas.</blockquote>
+
+  <p class="fuente-audio">Fuente del audio: Audio de prueba corto. Se sustituirá por el fragmento real de la entrevista grabada (pendiente de indicar grabación y minuto exacto).</p>
+
+  <a class="boton-volver" href="../index.html">← Volver a la exposición completa</a>
+</main>
+
+<script src="../js/panel.js"></script>
+</body>
+</html>

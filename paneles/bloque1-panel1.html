@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+  PLANTILLA BASE DE PANEL — NO EDITAR PARA UN PANEL CONCRETO.
+
+  Este archivo es la fuente que usa build.js para generar cada página de
+  panel (paneles/<id>.html) a partir del contenido en /contenido/*.md.
+  Los tokens con dobles llaves (ver el cuerpo del documento) los rellena
+  el script de construcción.
+
+  Para añadir o cambiar un panel, edita/crea un archivo en /contenido/ y
+  vuelve a ejecutar `node build.js`. No toques este archivo salvo que
+  quieras cambiar el diseño de TODOS los paneles a la vez.
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Panel de ejemplo (PLACEHOLDER) — Homenaje a Fulgencio Romera Asensio</title>
+<link rel="stylesheet" href="../css/estilo.css" />
+</head>
+<body>
+
+<!-- CONTENIDO PROVISIONAL: pendiente de sustituir por contenido real -->
+<script>console.log("%c\u26A0 Contenido provisional: pendiente de sustituir por contenido real.", "color:#9A7441;font-weight:bold;");</script>
+
+<section class="hero">
+  <div class="hero-nav">
+    <a class="hero-volver" href="../index.html">← Volver</a>
+    <span class="hero-indicador">1 / 2</span>
+  </div>
+
+  <button class="hero-tap" type="button" aria-label="Reproducir o pausar el audio de este panel">
+    <img src="../media/fotos/foto-clase-alumnos.jpg" alt="Fotografía histórica en blanco y negro de una clase escolar completa, con el maestro y decenas de alumnos posando en varias filas." />
+  </button>
+
+  <div class="hero-overlay">
+    <div class="hero-info">
+      <span class="etiqueta-bloque">Capítulo 01 · Infancia y raíces (1923–1936)</span>
+      <h1 class="hero-titulo">Panel de ejemplo (PLACEHOLDER)</h1>
+    </div>
+    <div class="hero-reproductor">
+      <span class="boton-play" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+      </span>
+      <span id="hero-texto" class="hero-texto">Toca para escuchar su voz</span>
+    </div>
+  </div>
+
+  <span id="hero-progreso" class="hero-progreso"></span>
+</section>
+
+<audio id="audio-panel" src="../media/audio/placeholder.wav" preload="metadata"></audio>
+
+<main class="contenido-panel">
+  <div class="contexto">
+    <p>Este es un párrafo de contexto histórico-social de EJEMPLO. Aquí se explicará qué ocurría en la época y en el lugar concretos que ilustra este panel —en este bloque, la infancia y las raíces familiares de Fulgencio Romera Asensio entre 1923 y 1936— para dar marco a quien escucha el audio.</p>
+    <p>Este segundo párrafo, también de ejemplo, serviría para ampliar el contexto: quién más aparece en la fotografía, qué fuentes documentales o familiares respaldan esta parte de la historia, etc. Todo este texto es un PLACEHOLDER y se sustituirá por contenido real cuando se cierre este bloque.</p>
+  </div>
+
+  <blockquote class="cita">Esta es una cita de ejemplo. Cuando cerremos este bloque, aquí irá una frase textual y real, tomada de sus entrevistas grabadas.</blockquote>
+
+  <p class="fuente-audio">Fuente del audio: Audio de prueba corto. Se sustituirá por el fragmento real de la entrevista grabada (pendiente de indicar grabación y minuto exacto).</p>
+
+  <a class="boton-volver" href="../index.html">← Volver a la exposición completa</a>
+</main>
+
+<script src="../js/panel.js"></script>
+</body>
+</html>

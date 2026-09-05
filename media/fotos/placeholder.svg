@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Fotografía de ejemplo en blanco y negro, contenido provisional">
+  <defs>
+    <linearGradient id="fondoFoto" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b9b0a1"/>
+      <stop offset="55%" stop-color="#948a78"/>
+      <stop offset="100%" stop-color="#6d6354"/>
+    </linearGradient>
+    <radialGradient id="vineta" cx="50%" cy="42%" r="75%">
+      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.35"/>
+    </radialGradient>
+    <filter id="desenfoque">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#fondoFoto)"/>
+
+  <g filter="url(#desenfoque)" opacity="0.85">
+    <ellipse cx="400" cy="240" rx="110" ry="130" fill="#5a5145"/>
+    <path d="M220 560 C220 420 300 380 400 380 C500 380 580 420 580 560 Z" fill="#5a5145"/>
+  </g>
+
+  <rect width="800" height="600" fill="url(#vineta)"/>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="24" y="536" width="330" height="40" rx="3" fill="#2a2018" opacity="0.55"/>
+    <text x="38" y="562" font-size="20" fill="#f0e4cc">Foto de ejemplo — sin sustituir</text>
+  </g>
+</svg>

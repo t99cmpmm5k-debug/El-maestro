@@ -1,0 +1,978 @@
+/* =========================================================================
+   Estilo compartido — Exposición homenaje a Fulgencio Romera Asensio
+   Estética de archivo histórico (crema, marrón, dorado envejecido, serif),
+   mobile-first, pensada para público mayor: tipografía grande, alto
+   contraste, botones grandes, tap simple. La sensación "de época" viene de
+   estos colores/tipografía/marcos, NO de aplicar un filtro sepia sobre las
+   fotografías reales — evitar añadir `filter: sepia(...)` a fotos nuevas.
+   Este archivo es único para toda la web: NO se edita al añadir un panel.
+   ========================================================================= */
+
+:root {
+  --color-fondo: #f4eddd;
+  --color-tarjeta: #f7f0e2;
+  --color-texto: #3c291b;
+  --color-texto-suave: #72563a;
+  --color-acento: #9a7441;
+  --color-borde: rgba(114, 86, 58, 0.35);
+  --color-boton-fondo: #72563a;
+  --color-boton-fondo-activo: #5c4630;
+  --color-boton-texto: #f4edde;
+  --color-foto-fondo: #2a2018;
+  --color-aviso: #a8431e;
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.235  0 0 0 0 0.161  0 0 0 0 0.106  0 0 0 0.035 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-repeat: repeat;
+  color: var(--color-texto);
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-acento);
+}
+
+/* -------------------- Aviso de contenido provisional (solo consola) --------------- */
+/*
+  El aviso de "contenido provisional" ya NO se muestra como elemento visual
+  al usuario final (rompía la estética de archivo histórico). Ahora se marca
+  con un comentario HTML junto al contenido afectado y un console.log() que
+  solo ve quien abra las herramientas de desarrollo. No necesita estilos.
+*/
+
+/* ------------------------------- Cabecera portada --------------------------------- */
+
+.cabecera {
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.cabecera h1 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  margin: 0 0 0.75rem;
+  color: var(--color-texto);
+}
+
+/* --------------------------- Portada: cabecera emocional --------------------------- */
+
+.cabecera-hero {
+  padding: 2.75rem 1.5rem 0.25rem;
+  text-align: center;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.cabecera-hero h1 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  letter-spacing: 0.01em;
+  margin: 0 0 0.5rem;
+  color: var(--color-texto);
+}
+
+.cabecera-hero .fechas {
+  font-family: var(--font-serif);
+  color: var(--color-texto-suave);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.ornamento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 12rem;
+  margin: 0 auto 1.25rem;
+}
+
+.ornamento-linea {
+  flex: 1;
+  height: 1px;
+  background: var(--color-acento);
+}
+
+.ornamento-simbolo {
+  color: var(--color-acento);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.titulo-seccion {
+  font-family: var(--font-serif);
+  text-align: center;
+  color: var(--color-texto);
+  font-size: 1.3rem;
+  margin: 0.5rem 0 1rem;
+}
+
+/* ----------------------------- Portada: fotografía de cabecera --------------------- */
+
+.foto-cabecera {
+  max-width: 24rem;
+  margin: 2.25rem auto 0.75rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.foto-cabecera-marco {
+  display: block;
+  background: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  padding: 10px 10px 14px;
+  box-shadow: 0 8px 20px rgba(60, 41, 27, 0.28);
+  transform: rotate(-1deg);
+}
+
+.foto-cabecera-marco img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.foto-cabecera figcaption {
+  margin-top: 0.85rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-texto-suave);
+}
+
+/* ------------------------------- Portada: intro editorial --------------------------- */
+
+.intro-editorial {
+  max-width: 40rem;
+  margin: 2.75rem auto 0;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.intro-editorial-kicker {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-texto);
+  margin: 0 0 0.85rem;
+}
+
+.intro-editorial p {
+  font-size: 1.05rem;
+  margin: 0 0 1rem;
+  color: var(--color-texto);
+}
+
+.intro-editorial-nota {
+  font-size: 0.95rem;
+  color: var(--color-texto-suave);
+  font-style: italic;
+}
+
+/* ------------------------------ Portada: escucha su voz ----------------------------- */
+
+.escucha-voz {
+  max-width: 28rem;
+  margin: 3rem auto;
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  background: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: 4px;
+  box-shadow: 0 6px 20px rgba(60, 41, 27, 0.22);
+}
+
+.escucha-voz-foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 3px solid var(--color-fondo);
+  box-shadow: 0 2px 8px rgba(60, 41, 27, 0.25);
+}
+
+.escucha-voz-etiqueta {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-acento);
+  margin-bottom: 0.6rem;
+}
+
+.escucha-voz-intro {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--color-texto);
+  max-width: 22rem;
+  margin: 0 auto 1.5rem;
+}
+
+.boton-escuchar {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: var(--color-boton-fondo);
+  color: var(--color-boton-texto);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 4px;
+  min-height: 56px;
+}
+
+.boton-escuchar:active {
+  background: var(--color-boton-fondo-activo);
+}
+
+/* -------------------------------- Portada: capítulos -------------------------------- */
+
+.lista-capitulos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 40rem;
+  margin: 3rem auto 0;
+  padding: 0 1.25rem;
+}
+
+.ficha-capitulo {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--color-texto);
+  box-shadow: 0 3px 8px rgba(60, 41, 27, 0.18);
+  transition: transform 0.15s ease;
+}
+
+.ficha-capitulo:active {
+  transform: scale(0.99);
+}
+
+.ficha-capitulo-foto {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.ficha-capitulo-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ficha-capitulo-foto-apagada img {
+  filter: grayscale(1) opacity(0.55);
+}
+
+.ficha-capitulo-info {
+  padding: 1.25rem 1.4rem 1.5rem;
+}
+
+.ficha-capitulo-numero {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.ficha-capitulo-numero-etiqueta {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-texto-suave);
+}
+
+.ficha-capitulo-numero-cifra {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--color-acento);
+}
+
+.ficha-capitulo-titulo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  color: var(--color-texto);
+}
+
+.ficha-capitulo-periodo {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+  margin-bottom: 0.85rem;
+}
+
+.ficha-capitulo-descripcion {
+  font-size: 1rem;
+  margin: 0 0 1rem;
+  color: var(--color-texto);
+}
+
+.ficha-capitulo-cta {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: var(--color-acento);
+}
+
+.ficha-capitulo-proximamente {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-texto-suave);
+}
+
+/* ------------------------------ Portada: más allá de su historia -------------------- */
+
+.mas-alla {
+  max-width: 40rem;
+  margin: 4rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.mas-alla-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-borde);
+}
+
+.mas-alla-item {
+  display: block;
+  padding: 1.1rem 0.25rem;
+  border-bottom: 1px solid var(--color-borde);
+  text-decoration: none;
+  color: var(--color-texto);
+  min-height: 44px;
+}
+
+.mas-alla-item:active {
+  background: var(--color-tarjeta);
+}
+
+.mas-alla-titulo {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--color-texto);
+}
+
+.mas-alla-titulo::after {
+  content: " →";
+  font-weight: normal;
+  color: var(--color-acento);
+}
+
+.mas-alla-descripcion {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-texto-suave);
+  margin-top: 0.2rem;
+}
+
+.cita-cierre {
+  max-width: 30rem;
+  margin: 4rem auto 1.5rem;
+  padding: 0 1.5rem;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--color-texto);
+}
+
+.cita-cierre .pendiente-marca {
+  display: block;
+  margin-top: 0.4rem;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--color-aviso);
+}
+
+.ilustracion-pueblo {
+  display: block;
+  width: 100%;
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  color: var(--color-texto-suave);
+}
+
+.ilustracion-pueblo svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pie {
+  text-align: center;
+  padding: 2rem 1.25rem 3rem;
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+}
+
+/* ------------------------------ Panel individual: hero ----------------------------- */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 480px;
+  overflow: hidden;
+  background: var(--color-foto-fondo);
+}
+
+.hero-tap {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-tap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: max(1rem, env(safe-area-inset-top)) 1rem 0;
+  pointer-events: none;
+}
+
+.hero-volver,
+.hero-indicador {
+  display: inline-block;
+  background: rgba(42, 32, 24, 0.5);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.hero-volver {
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(20, 15, 5, 0.9) 100%);
+  padding: 1.5rem 1.5rem max(1.75rem, env(safe-area-inset-bottom));
+  text-align: center;
+  pointer-events: none;
+}
+
+.hero-info {
+  max-width: 26rem;
+}
+
+.hero-titulo {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  margin: 0.4rem 0 0;
+}
+
+.hero-reproductor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.boton-play {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  background: rgba(240, 228, 204, 0.95);
+  border: 4px solid var(--color-fondo);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-play svg {
+  width: 42px;
+  height: 42px;
+  fill: var(--color-texto);
+}
+
+.hero-texto {
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: bold;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  max-width: 20rem;
+}
+
+.hero-progreso {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  width: 0%;
+  background: var(--color-fondo);
+}
+
+.etiqueta-bloque {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  background: var(--color-acento);
+  color: var(--color-boton-texto);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* ------------------------------ Panel individual: contenido ------------------------ */
+
+.contenido-panel {
+  /* Sin background propio a propósito: deja ver el fondo color + textura
+     de papel del <body> (nunca blanco) en vez de taparlo con un color
+     plano. */
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.contenido-panel .contexto p {
+  font-family: var(--font-serif);
+  color: var(--color-texto);
+  line-height: 1.7;
+  margin: 0 0 1.25rem;
+  font-size: 1.05rem;
+}
+
+.cita {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--color-texto);
+  background: var(--color-tarjeta);
+  border-left: 4px solid var(--color-acento);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 4px 14px rgba(60, 41, 27, 0.15);
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  margin: 2.75rem 0;
+  position: relative;
+}
+
+.cita::before {
+  content: "\201C";
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  color: var(--color-acento);
+  position: absolute;
+  left: 0.5rem;
+  top: -0.5rem;
+  line-height: 1;
+}
+
+.fuente-audio {
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+  margin: 0 0 2.5rem;
+}
+
+.boton-volver {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: var(--color-boton-fondo);
+  color: var(--color-boton-texto);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 3px;
+  min-height: 48px;
+}
+
+.boton-volver:active {
+  background: var(--color-boton-fondo-activo);
+}
+
+.boton-volver-seccion {
+  display: block;
+  max-width: 34rem;
+  margin: 0 auto 3rem;
+}
+
+/* ------------------------------ Páginas de sección (secundarias) ------------------- */
+
+.barra-superior {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 0;
+}
+
+.enlace-volver {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--color-acento);
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.cabecera-seccion {
+  padding-top: 1rem;
+}
+
+.seccion-placeholder {
+  max-width: 34rem;
+  margin: 0 auto 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.seccion-placeholder p {
+  font-size: 1.05rem;
+}
+
+.lector-libro-placeholder {
+  border: 1px dashed var(--color-acento);
+  border-radius: 3px;
+  background: var(--color-tarjeta);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--color-texto-suave);
+  font-style: italic;
+}
+
+/* ------------------------------ Formulario de recuerdos ---------------------------- */
+
+.formulario-recuerdo {
+  max-width: 34rem;
+  margin: 0 auto 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.formulario-recuerdo h2 {
+  font-family: var(--font-serif);
+  color: var(--color-texto);
+  font-size: 1.4rem;
+  margin: 0 0 0.4rem;
+}
+
+.formulario-recuerdo .subtitulo {
+  color: var(--color-texto-suave);
+  margin: 0 0 1.5rem;
+}
+
+.campo-formulario {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.campo-formulario label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  color: var(--color-texto);
+}
+
+.campo-formulario input[type="text"],
+.campo-formulario textarea {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  padding: 0.75rem;
+  border: 1px solid var(--color-acento);
+  border-radius: 3px;
+  background: var(--color-tarjeta);
+  color: var(--color-texto);
+}
+
+.campo-formulario textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.boton-enviar {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: var(--color-boton-fondo);
+  color: var(--color-boton-texto);
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: 0;
+  padding: 1rem 1.25rem;
+  border-radius: 3px;
+  min-height: 48px;
+  cursor: pointer;
+}
+
+.boton-enviar:active {
+  background: var(--color-boton-fondo-activo);
+}
+
+/* ------------------------------ Muro de recuerdos (tarjetas) ------------------------ */
+
+.muro-recuerdos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.tarjeta-recuerdo {
+  position: relative;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(114, 86, 58, 0.05) 0px,
+      rgba(114, 86, 58, 0.05) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    var(--color-tarjeta);
+  border: 1px solid var(--color-acento);
+  border-radius: 2px 6px 3px 5px;
+  padding: 1.5rem 1.25rem 1.1rem;
+  box-shadow: 0 3px 8px rgba(61, 43, 26, 0.22);
+}
+
+.tarjeta-recuerdo:nth-child(odd) {
+  transform: rotate(-2deg);
+}
+
+.tarjeta-recuerdo:nth-child(even) {
+  transform: rotate(2deg);
+  border-radius: 6px 2px 5px 3px;
+}
+
+.tarjeta-recuerdo::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 14px;
+  background: rgba(168, 135, 90, 0.6);
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.tarjeta-recuerdo-marca {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  color: var(--color-aviso);
+}
+
+.tarjeta-recuerdo .texto-recuerdo {
+  font-size: 1.05rem;
+  margin: 0 0 1rem;
+}
+
+.tarjeta-recuerdo .firma {
+  display: block;
+  text-align: right;
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-texto-suave);
+}
+
+/* ------------------------------ Galería de fotos ------------------------------------ */
+
+.galeria-grupo {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.galeria-grupo-titulo {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-texto-suave);
+  margin: 0 0 0.75rem;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.9rem;
+}
+
+.galeria-item {
+  aspect-ratio: 1;
+  border-radius: 3px;
+  border: 1px solid var(--color-acento);
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(61, 43, 26, 0.18);
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 700px) {
+  body {
+    font-size: 19px;
+  }
+
+  .cabecera h1 {
+    font-size: 2.5rem;
+  }
+
+  .cabecera-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-titulo {
+    font-size: 2rem;
+  }
+
+  .intro-editorial-kicker {
+    font-size: 1.75rem;
+  }
+
+  .foto-cabecera-marco img {
+    height: 260px;
+  }
+}
+
+@media (min-width: 960px) {
+  .cabecera-hero {
+    max-width: 960px;
+  }
+
+  .foto-cabecera {
+    max-width: 27rem;
+  }
+
+  .foto-cabecera-marco img {
+    height: 300px;
+  }
+
+  .intro-editorial {
+    max-width: 44rem;
+  }
+
+  .escucha-voz {
+    max-width: 32rem;
+  }
+
+  .lista-capitulos {
+    max-width: 1100px;
+    gap: 2.5rem;
+  }
+
+  .mas-alla {
+    max-width: 48rem;
+  }
+
+  .ficha-capitulo {
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 210px;
+  }
+
+  /* Personalidad propia por capítulo: en pantallas anchas, los capítulos
+     pares invierten el lado de la foto respecto a los impares, para que
+     la fila se lea como un índice ilustrado (spread de libro) y no como
+     una lista de tarjetas clonadas. */
+  .ficha-capitulo:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .ficha-capitulo-foto {
+    width: 40%;
+    aspect-ratio: auto;
+    flex-shrink: 0;
+  }
+
+  .ficha-capitulo-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 2.5rem;
+  }
+
+  .ficha-capitulo-titulo {
+    font-size: 1.65rem;
+  }
+}

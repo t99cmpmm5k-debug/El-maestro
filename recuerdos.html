@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+  Página estática (no generada por build.js): a diferencia de los paneles,
+  esta sección no tiene contenido variable por elemento, así que se edita
+  directamente aquí.
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Muro de recuerdos — Homenaje a Fulgencio Romera Asensio</title>
+<link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body>
+
+<!-- CONTENIDO PROVISIONAL: el formulario aún no envía nada real y los recuerdos mostrados son ficticios -->
+<script>console.log("%c⚠ Contenido provisional: el formulario aún no envía nada real y los recuerdos mostrados son ficticios.", "color:#9A7441;font-weight:bold;");</script>
+
+<div class="barra-superior">
+  <a class="enlace-volver" href="index.html">← Volver al inicio</a>
+</div>
+
+<header class="cabecera cabecera-seccion">
+  <h1>Muro de recuerdos</h1>
+</header>
+
+<section class="formulario-recuerdo">
+  <h2>Comparte tu recuerdo de Fulgencio</h2>
+  <p class="subtitulo">Cualquier recuerdo, anécdota o palabra suya que quieras compartir</p>
+
+  <!--
+    FORMULARIO PENDIENTE DE CONECTAR A UN BACKEND REAL.
+    Cuando se elija un servicio (por ejemplo Formspree: https://formspree.io),
+    cambiar este <form> para que apunte a la URL de Formspree con
+    method="POST" y quitar el script de más abajo que solo muestra un aviso.
+  -->
+  <form id="form-recuerdo">
+    <div class="campo-formulario">
+      <label for="campo-nombre">Tu nombre</label>
+      <input type="text" id="campo-nombre" name="nombre" autocomplete="name" />
+    </div>
+    <div class="campo-formulario">
+      <label for="campo-recuerdo">Tu recuerdo</label>
+      <textarea id="campo-recuerdo" name="recuerdo"></textarea>
+    </div>
+    <button type="button" id="boton-enviar-recuerdo" class="boton-enviar">Enviar recuerdo</button>
+  </form>
+</section>
+
+<section class="muro-recuerdos-seccion">
+  <h2 class="titulo-seccion">Recuerdos compartidos</h2>
+  <div class="muro-recuerdos">
+    <article class="tarjeta-recuerdo">
+      <span class="tarjeta-recuerdo-marca">PLACEHOLDER — recuerdo ficticio de ejemplo</span>
+      <p class="texto-recuerdo">Don Fulgencio me enseñó que las preguntas también abren caminos. Gracias por su paciencia y por creer en nosotros.</p>
+      <span class="firma">— María López</span>
+    </article>
+    <article class="tarjeta-recuerdo">
+      <span class="tarjeta-recuerdo-marca">PLACEHOLDER — recuerdo ficticio de ejemplo</span>
+      <p class="texto-recuerdo">Todavía recuerdo su voz diciendo "estudiad, que la vida es más grande que este pueblo". Fue, y sigue siendo, un ejemplo.</p>
+      <span class="firma">— Julián Torres</span>
+    </article>
+    <article class="tarjeta-recuerdo">
+      <span class="tarjeta-recuerdo-marca">PLACEHOLDER — recuerdo ficticio de ejemplo</span>
+      <p class="texto-recuerdo">Mi padre siempre hablaba de usted con una sonrisa. Decía que le cambió la vida para siempre.</p>
+      <span class="firma">— Carmen Martínez</span>
+    </article>
+  </div>
+</section>
+
+<a class="boton-volver boton-volver-seccion" href="index.html">← Volver a la exposición completa</a>
+
+<script>
+  document.getElementById("boton-enviar-recuerdo").addEventListener("click", function () {
+    alert("Función pendiente de conectar");
+  });
+</script>
+
+</body>
+</html>

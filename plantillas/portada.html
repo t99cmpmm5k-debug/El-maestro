@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+  PLANTILLA BASE DE LA PORTADA — NO EDITAR A MANO EL index.html GENERADO.
+
+  build.js sustituye el token de tarjetas (ver más abajo, en el cuerpo)
+  por una ficha de archivo por cada uno de los 6 capítulos cronológicos
+  (llamados "bloques" internamente, ver constante BLOQUES en build.js),
+  enlazando al primer panel de cada uno. Para cambiar el diseño de la
+  portada, edita este archivo y vuelve a ejecutar `node build.js`.
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Homenaje a Fulgencio Romera Asensio</title>
+<link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body>
+
+{{AVISO_PROVISIONAL}}
+
+<header class="cabecera-hero">
+  <h1>Fulgencio Romera Asensio</h1>
+  <p class="fechas">1923 — 2021</p>
+</header>
+
+<div class="ornamento" aria-hidden="true">
+  <span class="ornamento-linea"></span>
+  <span class="ornamento-simbolo">❦</span>
+  <span class="ornamento-linea"></span>
+</div>
+
+<!--
+  PRUEBA VISUAL, NO DEFINITIVA: foto real usada solo para ver cómo se ve el
+  diseño con fotografías reales. La asignación final de qué foto va aquí
+  puede cambiar más adelante.
+-->
+<figure class="foto-cabecera">
+  <span class="foto-cabecera-marco">
+    <img src="media/fotos/foto-maestro-escuela.jpg" alt="Fulgencio Romera Asensio de pie frente a una escuela de pueblo, con alumnos saliendo del edificio." />
+  </span>
+  <figcaption>Fulgencio Romera Asensio, durante sus años como maestro.</figcaption>
+</figure>
+
+<div class="intro-editorial">
+  <h2 class="intro-editorial-kicker">Una vida dedicada a enseñar</h2>
+  <p>
+    Maestro en Puerto Lumbreras (Murcia) durante más de seis décadas. Este
+    archivo reúne sus fotografías, sus documentos y su propia voz.
+  </p>
+  <p class="intro-editorial-nota">Recorre su historia a través de 6 capítulos.</p>
+</div>
+
+<!-- PRUEBA VISUAL, NO DEFINITIVA: foto real usada solo para ver el diseño; la asignación final puede cambiar. -->
+<section class="escucha-voz">
+  <img class="escucha-voz-foto" src="media/fotos/foto-retrato-jardin.jpg" alt="Retrato de Fulgencio Romera Asensio en el jardín de su casa." />
+  <span class="escucha-voz-etiqueta">Escucha su voz</span>
+  <p class="escucha-voz-intro">El corazón de este archivo son sus propias palabras: fragmentos originales de las entrevistas que le grabamos.</p>
+  <a class="boton-escuchar" href="paneles/bloque1-panel1.html">▶ Escuchar a Fulgencio</a>
+</section>
+
+<nav class="lista-capitulos" aria-label="Capítulos de su vida">
+{{TARJETAS_BLOQUES}}
+</nav>
+
+<section class="mas-alla">
+  <h2 class="titulo-seccion">Más allá de su historia</h2>
+  <ul class="mas-alla-lista">
+    <li>
+      <a class="mas-alla-item" href="libro.html">
+        <span class="mas-alla-titulo">El libro homenaje</span>
+        <span class="mas-alla-descripcion">Fotografías, textos y testimonios reunidos en su homenaje.</span>
+      </a>
+    </li>
+    <li>
+      <a class="mas-alla-item" href="galeria.html">
+        <span class="mas-alla-titulo">Archivo fotográfico</span>
+        <span class="mas-alla-descripcion">Recorre las fotografías conservadas de su vida.</span>
+      </a>
+    </li>
+    <li>
+      <a class="mas-alla-item" href="recuerdos.html">
+        <span class="mas-alla-titulo">Muro de recuerdos</span>
+        <span class="mas-alla-descripcion">Deja un recuerdo o unas palabras sobre Fulgencio.</span>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<p class="cita-cierre">
+  <em>&ldquo;Enseñar también es sembrar&rdquo;</em>
+  <span class="pendiente-marca">PENDIENTE — se sustituirá por una cita textual real</span>
+</p>
+
+<div class="ilustracion-pueblo" aria-hidden="true">
+  <svg viewBox="0 0 600 130" preserveAspectRatio="xMidYMax meet">
+    <g fill="currentColor">
+      <rect x="0" y="90" width="70" height="40"/>
+      <polygon points="0,90 35,62 70,90"/>
+      <rect x="60" y="75" width="55" height="55"/>
+      <polygon points="60,75 87,52 115,75"/>
+      <rect x="105" y="95" width="60" height="35"/>
+      <polygon points="105,95 135,70 165,95"/>
+      <rect x="230" y="30" width="34" height="100"/>
+      <polygon points="230,30 247,10 264,30"/>
+      <rect x="243" y="14" width="8" height="16"/>
+      <rect x="222" y="0" width="50" height="6"/>
+      <rect x="150" y="80" width="65" height="50"/>
+      <polygon points="150,80 182,55 215,80"/>
+      <rect x="280" y="92" width="60" height="38"/>
+      <polygon points="280,92 310,68 340,92"/>
+      <rect x="335" y="78" width="55" height="52"/>
+      <polygon points="335,78 362,55 390,78"/>
+      <rect x="385" y="98" width="70" height="32"/>
+      <polygon points="385,98 420,72 455,98"/>
+      <rect x="450" y="85" width="60" height="45"/>
+      <polygon points="450,85 480,60 510,85"/>
+      <rect x="505" y="100" width="65" height="30"/>
+      <polygon points="505,100 537,75 570,100"/>
+    </g>
+  </svg>
+</div>
+
+<footer class="pie">
+  <p>Web complementaria a la exposición homenaje a Fulgencio Romera Asensio.</p>
+</footer>
+
+</body>
+</html>
