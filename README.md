@@ -69,10 +69,22 @@ con el resto de la web.
   intervenciones — ver el mensaje de entrega de esta página para el
   detalle de la correspondencia audio-persona y qué falta por confirmar.
 
-La portada enlaza a las tres desde la sección "Más allá de su historia", al
-final del recorrido (después de los 6 capítulos), como una lista sencilla de
-enlaces con descripción breve — deliberadamente más discreta que las fichas
-de capítulo, para no competir con la narrativa cronológica principal.
+  **PENDIENTE DE INTEGRACIÓN FUTURA:** `mural-de-voces.html` vive como
+  página suelta solo porque el Capítulo 6 "El legado" todavía no existe
+  como página real (sigue en estado "Próximamente" en la portada, ver
+  constante `BLOQUES` en `build.js`). En cuanto se construya el contenido
+  real de ese capítulo, el mural de voces debe dejar de ser un enlace
+  aparte en "Más allá de su historia" y pasar a integrarse **dentro** del
+  Capítulo 6, como su sección final de cierre (el mismo mosaico de
+  tarjetas de audio, al final del recorrido de ese capítulo). Hay un
+  comentario recordatorio tanto en `mural-de-voces.html` como en el `<li>`
+  correspondiente de `plantillas/portada.html`.
+
+La portada enlaza a estas páginas desde la sección "Más allá de su
+historia", al final del recorrido (después de los 6 capítulos), como una
+lista sencilla de enlaces con descripción breve — deliberadamente más
+discreta que las fichas de capítulo, para no competir con la narrativa
+cronológica principal.
 
 ### Por qué esta solución (y no Jekyll u otro framework)
 
