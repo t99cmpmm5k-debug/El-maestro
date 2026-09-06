@@ -888,6 +888,167 @@ a {
   object-fit: cover;
 }
 
+/* ------------------------------ Mural de voces (cierre del homenaje) ---------------- */
+
+.cabecera-mural {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 0;
+  text-align: center;
+}
+
+.cabecera-mural h1 {
+  font-family: var(--font-serif);
+  font-size: 1.9rem;
+  margin: 0.5rem 0 0;
+  color: var(--color-texto);
+}
+
+.cabecera-mural-intro {
+  font-size: 1rem;
+  color: var(--color-texto-suave);
+  max-width: 30rem;
+  margin: 0 auto 2.5rem;
+}
+
+.mural-voces {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.mural-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+.tarjeta-voz {
+  position: relative;
+  background: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: 4px;
+  padding: 1.9rem 1.5rem 1.6rem;
+  box-shadow: 0 4px 14px rgba(60, 41, 27, 0.18);
+  text-align: center;
+}
+
+.tarjeta-voz-esquina {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--color-acento);
+  opacity: 0.8;
+}
+
+.esquina-tl {
+  top: 8px;
+  left: 8px;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.esquina-tr {
+  top: 8px;
+  right: 8px;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.esquina-bl {
+  bottom: 8px;
+  left: 8px;
+  border-right: 0;
+  border-top: 0;
+}
+
+.esquina-br {
+  bottom: 8px;
+  right: 8px;
+  border-left: 0;
+  border-top: 0;
+}
+
+.tarjeta-voz-nombre {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-texto);
+  margin: 0 0 0.75rem;
+}
+
+.tarjeta-voz-cargo {
+  font-family: var(--font-sans);
+  font-weight: normal;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+}
+
+.tarjeta-voz-cita {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--color-texto);
+  max-width: 22rem;
+  margin: 0 auto 1.5rem;
+}
+
+.reproductor-voz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.boton-voz {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-boton-fondo);
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(60, 41, 27, 0.3);
+}
+
+.boton-voz:active {
+  background: var(--color-boton-fondo-activo);
+}
+
+.boton-voz svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-boton-texto);
+}
+
+.voz-tiempo {
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--color-texto-suave);
+  min-width: 3.2rem;
+  text-align: left;
+}
+
+.tarjeta-voz-pendiente {
+  font-family: var(--font-sans);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--color-aviso);
+  margin: 0;
+}
+
+@media (min-width: 700px) {
+  .mural-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
 @media (min-width: 700px) {
   body {
     font-size: 19px;

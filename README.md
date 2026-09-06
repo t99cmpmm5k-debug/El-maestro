@@ -31,9 +31,9 @@ la web con un comando.
 └── css/estilo.css           ← estilo visual único para toda la web
 ```
 
-### Secciones adicionales (`recuerdos.html`, `libro.html`, `galeria.html`)
+### Secciones adicionales (`recuerdos.html`, `libro.html`, `galeria.html`, `mural-de-voces.html`)
 
-A diferencia de la portada y los paneles, estas tres páginas **no se generan**
+A diferencia de la portada y los paneles, estas páginas **no se generan**
 con `build.js`: no tienen contenido variable por elemento (no hay un archivo
 por recuerdo, por foto de galería, etc.), así que son HTML estático de toda
 la vida que se edita directamente en el propio archivo. Todas usan el mismo
@@ -56,6 +56,18 @@ con el resto de la web.
   década a modo de ejemplo ("Años 20-30", etc.). Usa el mismo placeholder
   de foto (`media/fotos/placeholder.svg`) que las tarjetas de bloque de la
   portada, mientras no haya fotos reales organizadas.
+- **`mural-de-voces.html`** — Mural de cierre de la exposición: mosaico de
+  tarjetas solo-audio (sin fotografías, sin vídeo a propósito) con los
+  testimonios del homenaje que le dieron alumnos, familia y amigos. Cada
+  tarjeta tiene su propio reproductor de "un toque" (`js/mural-voces.js`);
+  al reproducir uno se pausan los demás automáticamente. Los audios viven
+  en `media/audio/mural-voces/` (convertidos a MP3 para que pesen poco en
+  móvil; los `.wav` sin comprimir de origen no se suben al repositorio).
+  Dos tarjetas (Diego Muñoz Chacón, Carmen Marín) están marcadas
+  "Audio pendiente de asignar": no se encontró en el material de origen un
+  archivo de audio que se correspondiera con la duración real de sus
+  intervenciones — ver el mensaje de entrega de esta página para el
+  detalle de la correspondencia audio-persona y qué falta por confirmar.
 
 La portada enlaza a las tres desde la sección "Más allá de su historia", al
 final del recorrido (después de los 6 capítulos), como una lista sencilla de
